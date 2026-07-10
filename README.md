@@ -1,16 +1,38 @@
-# React + Vite
+# t3_act5_react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto de práctica en React donde hice varios componentes chiquitos para practicar lo básico: componentes funcionales, props, useState y renderizar listas con `.map()`.
 
-Currently, two official plugins are available:
+## ¿Qué tiene el proyecto?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Un componente simple que solo muestra un texto (`Saludo`).
+- Un componente que recibe props y las muestra (`Persona`).
+- Un contador hecho con `useState` que suma y reinicia.
+- Un botón que muestra/oculta un texto.
+- Una lista de notas que se renderiza dinámicamente con `.map()` (`TodoApp`).
 
-## React Compiler
+## Cómo correrlo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+El proyecto también está publicado en GitHub Pages:
+https://badiolajh.github.io/t3_act5_react/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Preguntas
+
+**a) ¿Qué diferencia hay entre props y state en React?**
+
+los pops son datos que llegan de afuera y solo son de lectura, los state son datos que maneja el componente mismo y puede cambiar (por ejemplo con un click.)
+
+
+**b) ¿Por qué es importante usar una key al renderizar una lista de elementos?**
+
+Para identificar cada elemento de la lista. Si no se pone key, react se puede confundir al actualizar la lista y renderizar mal o de forma más lenta.
+
+**c) Explica con tus propias palabras qué hace la función useState y da un ejemplo de dónde la usaste en tu mini aplicación.**
+
+useState sirve para "recordar" un valor y que cuando ese valor cambie, el componente se vuelva a dibujar en pantalla.
